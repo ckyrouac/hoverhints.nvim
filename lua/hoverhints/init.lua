@@ -55,6 +55,7 @@ function M.create_float_window()
 
   -- Handle the error by creating a custom window under the cursor
   local buf = vim.api.nvim_create_buf(false, true)
+  vim.api.nvim_buf_set_option(buf, 'filetype', 'HoverHint')
   local max_width = math.ceil(vim.o.columns * config.options.max_width_factor)
   local messages = {}
 
